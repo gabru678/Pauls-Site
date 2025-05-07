@@ -3,7 +3,8 @@ body {
     color: #333;
     text-align: center;
     background-color: #3c9af2de; 
-    background: url('your-photo.jpg') no-repeat center center fixed;
+    /*background: url('your-photo.jpg') no-repeat center center fixed;*/
+    background-image: url('https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDJ8fGJsdXUlMjBzaWxlbnxlbnwwfHx8fDE2OTI3NzY5NTg&ixlib=rb-4.0.3&q=80&w=1080');
     background-size: cover;
     display: flex;
     justify-content: center;
@@ -31,7 +32,7 @@ h2 {
     font-size: 2em;
     color: #3b0101;
     margin-top: 20px;
-    animation: slideIn 2s ease-in-out;
+    animation: fadeIn 4s ease-in;
 }
 @keyframes slideIn {
     from { transform: translateY(-50px); opacity: 0; }
