@@ -39,28 +39,40 @@ h2 {
     to { transform: translateY(0); opacity: 1; }
 }
 
-.gallery-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 60vh; /* Adjust based on your layout */
-    overflow: hidden;
-}
 
 .gallery {
     width: 80%;
     height: 300px; /* Fixed height for the gallery box */
     border: 2px solid #333; /* Visible border */
+    display: flex;
     background-color: #f4f4f4; /* Light gray background */
     overflow-x: scroll; /* Enables horizontal scrolling */
     white-space: nowrap; /* Prevents images from wrapping */
     padding: 10px;
-    border-radius: 10px; /* Rounded corners */
+    border-radius: 18px; /* Rounded corners */
     transition: transform 0.3s ease-in-out; /* Smooth hover effect */
 }
 
 .gallery img:hover {
     transform: scale(1.1); /* Slight zoom on hover */
+}
+.scroll-container {
+    width: 90%;
+    overflow-x: auto; /* Enables horizontal scrolling */
+    white-space: nowrap; /* Prevents line breaks */
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    border: 2px solid #333;
+    background-color: #f4f4f4;
+}
+
+.gallery img {
+    width: 200px; /* Adjust size */
+    height: auto;
+    margin: 5px;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
 }
 
 @media (max-width: 600px) {
