@@ -18,6 +18,8 @@ h1 {
     font-weight: bold;
     color: #000;
     margin-top: 20%;
+    margin-bottom: 20px; /* Adds space below header */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     letter-spacing: 2px;
     animation: fadeIn 4s ease-in;
 }
@@ -32,6 +34,7 @@ h2 {
     font-size: 2em;
     color: #3b0101;
     margin-top: 20px;
+    margin-bottom: 20px; /* Adds space below header */
     animation: fadeIn 4s ease-in;
 }
 @keyframes slideIn {
@@ -45,12 +48,16 @@ h2 {
     height: 300px; /* Fixed height for the gallery box */
     border: 2px solid #333; /* Visible border */
     display: flex;
-    background-color: #f4f4f4; /* Light gray background */
+    background-color: #ea8282; /* Light gray background */
     overflow-x: scroll; /* Enables horizontal scrolling */
     white-space: nowrap; /* Prevents images from wrapping */
     padding: 10px;
     border-radius: 18px; /* Rounded corners */
     transition: transform 0.3s ease-in-out; /* Smooth hover effect */
+    animation: slideIn 4s drop-in;
+    animation-fill-mode: forwards; /* Keeps the final state of the animation */
+    animation-delay: 0.5s; /* Delay before the animation starts */
+    animation-duration: 4s; /* Duration of the animation */
 }
 
 .gallery img:hover {
@@ -65,6 +72,7 @@ h2 {
     padding: 10px;
     border: 2px solid #333;
     background-color: #f4f4f4;
+    margin-top: 20px; /* Ensures spacing from header */
 }
 
 .gallery img {
