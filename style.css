@@ -1,0 +1,39 @@
+body {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    text-align: center;
+    background-color: #f4f4f4; /* Soft gray background */
+    background: url('your-photo.jpg') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+h1 {
+    font-size: 4em;
+    font-weight: bold;
+    color: #000;
+    margin-top: 20%;
+    letter-spacing: 2px;
+    animation: fadeIn 2s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* from AI below */
+h2 {
+    font-size: 2em;
+    color: #fff;
+    margin-top: 20px;
+    animation: slideIn 2s ease-in-out;
+}
+@keyframes slideIn {
+    from { transform: translateY(-50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
