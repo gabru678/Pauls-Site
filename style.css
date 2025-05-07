@@ -2,7 +2,7 @@ body {
     font-family: 'Arial', sans-serif;
     color: #333;
     text-align: center;
-    background-color: #f4f4f4; /* Soft gray background */
+    background-color: #3c9af2de; 
     background: url('your-photo.jpg') no-repeat center center fixed;
     background-size: cover;
     display: flex;
