@@ -35,6 +35,7 @@ h2 {
     color: #3b0101;
     margin-top: 20px;
     margin-bottom: 20px; /* Adds space below header */
+    animation-delay: 1.5s;
     animation: fadeIn 4s ease-in;
 }
 @keyframes slideIn {
