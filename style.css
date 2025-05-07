@@ -37,3 +37,14 @@ h2 {
     from { transform: translateY(-50px); opacity: 0; }
     to { transform: translateY(0); opacity: 1; }
 }
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: #333; /* Dark background */
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 0.9em;
+}
