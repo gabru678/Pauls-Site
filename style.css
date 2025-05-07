@@ -11,7 +11,7 @@ body {
     justify-content: center;
     align-items: center;
     overflow: auto;
-    
+
     height: 100vh;
     margin: 0;
 }
@@ -20,7 +20,7 @@ h1 {
     font-size: 4em;
     font-weight: bold;
     color: #000;
-    margin-top: 20%;
+    margin-top: 13px;
     margin-bottom: 20px; /* Adds space below header */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     letter-spacing: 2px;
@@ -77,6 +77,7 @@ h2 {
     border: 2px solid #333;
     background-color: #f4f4f4;
     margin-top: 20px; /* Ensures spacing from header */
+    overflow: auto;
 }
 
 .gallery img {
