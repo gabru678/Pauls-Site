@@ -105,3 +105,37 @@ footer {
     padding: 10px 0;
     font-size: 0.9em;
 }
+
+.cursor-trail {
+    position: fixed;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    pointer-events: none;
+    animation: trail 1s linear forwards;
+}
+
+@keyframes trail {
+    0% {
+        transform: scale(1);
+        background: violet;
+        opacity: 1;
+    }
+    20% {
+        background: indigo;
+    }
+    40% {
+        background: blue;
+    }
+    60% {
+        background: green;
+    }
+    80% {
+        background: yellow;
+    }
+    100% {
+        transform: scale(0);
+        background: red;
+        opacity: 0;
+    }
+}
