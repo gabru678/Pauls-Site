@@ -1,69 +1,147 @@
 body {
     font-family: 'Papyrus', sans-serif;
     color: #333;
-    text-align: center;
+    /*text-align: center; */
     background-color: #3c9af2de; 
     background: url('Images/PBeezy32-5985.jpg') no-repeat center center fixed;
-    /*background-image: url('https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDJ8fGJsdXUlMjBzaWxlbnxlbnwwfHx8fDE2OTI3NzY5NTg&ixlib=rb-4.0.3&q=80&w=1080'); */
     background-size: cover;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     overflow: auto;
-
-    height: 100vh;
+    height: auto;
     margin: 0;
+    /* cursor: none;  Removes the default mouse arrow */
+}
 
-    cursor: none; /* Removes the default mouse arrow */
+html {
+    scroll-behavior: smooth;
 }
 
 h1 {
     font-size: 4em;
     font-weight: bold;
     color: #000;
-    margin-top: 13px;
-    margin-bottom: 20px; /* Adds space below header */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin-top: 50px;
+    margin-bottom: 500px; /* Adds space below header */
+    text-shadow: 2px 2px 4px rgba(14, 2, 2, 0.5);
     letter-spacing: 2px;
     animation: fadeIn 4s ease-in;
+    /* z-index: 9998;  Ensure it stays above all other elements */
 }
 
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-
-/* from AI below */
 h2 {
-    font-size: 2em;
+    font-size: 3em;
     color: #3b0101;
     margin-top: 20px;
     margin-bottom: 20px; /* Adds space below header */
     animation-delay: 1.5s;
-    animation: fadeIn 4s ease-in;
+    animation: fadeIn 5s ease-in;
 }
 @keyframes slideIn {
-    from { transform: translateY(-50px); opacity: 0; }
+    from { transform: translateY(-70px); opacity: 0; }
     to { transform: translateY(0); opacity: 1; }
 }
 
-/* Custom glowing circle */
 #custom-cursor {
     position: absolute;
-    width: 50px; /* Size of the circle */
-    height: 50px;
-    border-radius: 50%; /* Makes it a circle */
-    background: radial-gradient(circle, rgba(255, 255, 255, 0.8) 0%, rgba(0, 0, 255, 0.5) 100%);
-    box-shadow: 0 0 15px rgba(0, 0, 255, 0.8), 0 0 30px rgba(0, 0, 255, 0.5);
-    pointer-events: none; /* Prevents interference with clicks */
-    transform: translate(-50%, -50%); /* Centers the circle on the cursor */
-    z-index: 9999; /* Ensures it stays above all other elements */
+    width: 5px; /* Adjust the size of the camera icon */
+    height: 5px;
+    background: url('Images/camera-icon.png') no-repeat center center;
+    background-size: contain; /* Ensure the image fits within the cursor */
+    pointer-events: none; /* Prevent interference with clicks */
+    transform: translate(-50%, -50%); /* Center the cursor */
+    z-index: 9999; /* Ensure it stays above all other elements */
+}
+
+.image-section {
+    margin-top: 30px; /* Moves the section further down */
+    padding-left: 2px; /* Adds padding to the left of the section */
+}
+
+/* Ensure images fit the width of the container */
+.image-section img {
+    width: 700px; /* Scale image to fit the container width */
+    margin-top: 100px; /* Moves the section further down */
+    object-fit: cover;
+    /* height: auto;   Maintain aspect ratio */
+    max-width: 500px;
+    max-height: 400px;;
+    /* max-width: 800px; Optional: Set a maximum width for large screens */
+    border-radius: 30px; /* Optional: Add rounded corners */
+    transition: transform 0.5s ease, box-shadow 0.9s ease; /* Smooth hover effects */
+}
+
+/* Hover effect for images */
+.image-section img:hover {
+    transform: scale(1.17); /* Slight zoom effect */
+    box-shadow: 0 1px 20px rgba(0, 0, 0, 0.3); /* Add shadow on hover */
 }
 
 
+.image-text {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+}
+
+.image-text img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.image-text h2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(235, 200, 200);
+    font-size: 1.5em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    text-align: center;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.image-text:hover img {
+    transform: scale(1.1);
+}
+
+.image-text:hover h2 {
+    opacity: 1;
+}
+
+.gallery img:hover {
+    transform: scale(1.06); /* Slight zoom on hover */
+}
+.scroll-container {
+    width: 100%;
+    overflow-x: auto; /* Enables horizontal scrolling */
+    white-space: nowrap; /* Prevents line breaks */
+    display: flex;
+    justify-content: center;
+    /*padding: 100px; */
+    border: 2px solid #333;
+    background-color: #f4f4f4;
+    margin-top: 40px; /* Ensures spacing from header */
+    overflow: auto;
+    border-radius: 18px; /* Rounded corners */
+    transition: transform 0.3s ease-in-out; /* Smooth hover effect */
+    animation: slideIn 4s drop-in;
+    animation-fill-mode: forwards; /* Keeps the final state of the animation */
+    animation-delay: 0.5s; /* Delay before the animation starts */
+    animation-duration: 4s; /* Duration of the animation */
+}
+
 .gallery {
-    width: 80%;
+    width: 100%;
     height: 300px; /* Fixed height for the gallery box */
     border: 2px solid #333; /* Visible border */
     display: flex;
@@ -79,30 +157,8 @@ h2 {
     animation-duration: 4s; /* Duration of the animation */
 }
 
-.gallery img:hover {
-    transform: scale(1.1); /* Slight zoom on hover */
-}
-.scroll-container {
-    width: 90%;
-    overflow-x: auto; /* Enables horizontal scrolling */
-    white-space: nowrap; /* Prevents line breaks */
-    display: flex;
-    justify-content: center;
-    padding: 10px;
-    border: 2px solid #333;
-    background-color: #f4f4f4;
-    margin-top: 20px; /* Ensures spacing from header */
-    overflow: auto;
-    border-radius: 18px; /* Rounded corners */
-    transition: transform 0.3s ease-in-out; /* Smooth hover effect */
-    animation: slideIn 4s drop-in;
-    animation-fill-mode: forwards; /* Keeps the final state of the animation */
-    animation-delay: 0.5s; /* Delay before the animation starts */
-    animation-duration: 4s; /* Duration of the animation */
-}
-
 .gallery img {
-    width: 200px; /* Adjust size */
+    width: auto; /* Adjust size */
     height: auto;
     margin: 5px;
     border-radius: 10px;
@@ -115,6 +171,128 @@ h2 {
     }
 }
 
+/* Button hover effect */
+button {
+    background-color: #3c9af2; /* Initial button color */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #1a73e8; /* Darker blue on hover */
+    transform: scale(1.01); /* Slight zoom effect */
+}
+
+/* Input field hover effect */
+input, textarea {
+    border: 2px solid #ccc;
+    padding: 10px;
+    font-size: 1em;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus, textarea:focus {
+    border-color: #3c9af2; /* Blue border on focus */
+    box-shadow: 0 0 5px rgba(60, 154, 242, 0.5); /* Glow effect */
+}
+
+/* Link hover effect */
+a {
+    color: #3c9af2;
+    text-decoration: none;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+a:hover {
+    color: #1a73e8; /* Darker blue on hover */
+    text-shadow: 0 0 5px rgba(60, 154, 242, 0.5); /* Glow effect */
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px); /* Slight upward movement */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Apply fade-in to elements */
+h1, h2, form {
+    animation: fadeIn 4s ease-in;
+}
+
+/* Custom cursor trail effect 
+#custom-cursor {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.8) 0%, rgba(0, 0, 255, 0.5) 100%);
+    box-shadow: 0 0 15px rgba(0, 0, 255, 0.8), 0 0 30px rgba(0, 0, 255, 0.5);
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+} */
+
+
+@media (max-width: 768px) {
+    /* Adjust button size for smaller screens */
+    button {
+        font-size: 0.9em;
+        padding: 8px 16px;
+    }
+
+    /* Make gallery images stack vertically */
+    .gallery img {
+        width: 200px; /* Scale image to fit the container width */
+        margin-top: 90px; /* Moves the section further down */
+        padding-left: 10px;
+        object-fit: cover;
+        height: auto;  /* Maintain aspect ratio */
+        max-width: 200px;
+        margin: 5px 0;
+        
+    }
+    
+    .image-section img {
+        width: 200px; /* Scale image to fit the container width */
+        margin-top: 90px; /* Moves the section further down */
+        padding-left: 10px;
+        object-fit: cover;
+        height: auto;  /* Maintain aspect ratio */
+        max-width: 200px;
+        margin: 5px 0;
+    }
+
+    /* Adjust form layout */
+    form {
+        width: 50%;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Further adjustments for very small screens */
+    h1 {
+        font-size: 1.5em;
+    }
+
+    h2 {
+        font-size: 1.2em;
+    }
+
+    footer {
+        font-size: 0.8em;
+    }
+}
 
 footer {
     position: absolute;
@@ -125,8 +303,10 @@ footer {
     text-align: center;
     padding: 10px 0;
     font-size: 0.9em;
+    margin-top: -100px;
 }
 
+/*
 .cursor-trail {
     position: fixed;
     width: 10px;
@@ -135,7 +315,9 @@ footer {
     pointer-events: none;
     animation: trail 1s linear forwards;
 }
+*/
 
+/*
 @keyframes trail {
     0% {
         transform: scale(1);
@@ -160,3 +342,4 @@ footer {
         opacity: 0;
     }
 }
+*/
