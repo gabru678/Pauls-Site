@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>About Me</h1>
+    
+    <p>Hi, I'm Paul! Welcome to my photography portfolio. I love capturing unique moments through my lens and exploring visual storytelling.</p>
+    
+    <div class="scroll-container">
+        <div class="gallery">
+            <img src="Images/PBeezy32-9344(1).jpg" alt="Beezy shot 1">
+            <img src="Images/2PBeezy32-5181.jpg" alt="Beezy shot 2">
+            <img src="Images/21PBeezy32-5204.jpg" alt="Beezy shot 3">
+            <img src="Images/22PBeezy32-5485.jpg" alt="Beezy shot 4">
+            <img src="Images/36PBeezy32-5690.jpg" alt="Beezy shot 5">
+            <img src="Images/48PBeezy32-5599.jpg" alt="Beezy shot 6">
+            <img src="Images/59PBeezy32-5497.jpg" alt="Beezy shot 7">
+            <img src="Images/62PBeezy32-5466.jpg" alt="Beezy shot 8">
+
+        </div>
+    </div>
+
+
+    <a href="index.html">Back to Home</a>
+
+    <script>
+        const cursor = document.createElement('div');
+        cursor.id = 'custom-cursor';
+        document.body.appendChild(cursor);
+
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.left = `${e.pageX}px`;
+            cursor.style.top = `${e.pageY}px`;
+        });
+    </script>
+    
+    <footer>
+        <p>&copy;© 2025 Beezy Industries. Patent Pending.</p>
+    </footer>
+</body>
+</html>
