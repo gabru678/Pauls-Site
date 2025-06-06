@@ -2,35 +2,29 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" href="style.css">
-
+    <link rel="icon" href="Images/favicon.ico" type="image/x-icon">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Paul's Photography</title>
-
 </head>
 <body>
-    <h1>Joe Blows</h1>
+    <h1>Joez Blows</h1>
     <a href="whomst.html">About Me Section</a>
     <h2>Jon Jones is ducking P Beezy</h2>
-
-
-    <div class="scroll-container">
-        <div class="gallery">
-            <img src="Images/PBeezy32-9344(1).jpg" alt="Beezy shot 1">
-            <img src="Images/2PBeezy32-5181.jpg" alt="Beezy shot 2">
-            <img src="Images/21PBeezy32-5204.jpg" alt="Beezy shot 3">
-            <img src="Images/22PBeezy32-5485.jpg" alt="Beezy shot 4">
-            <img src="Images/36PBeezy32-5690.jpg" alt="Beezy shot 5">
-            <img src="Images/48PBeezy32-5599.jpg" alt="Beezy shot 6">
-            <img src="Images/59PBeezy32-5497.jpg" alt="Beezy shot 7">
-            <img src="Images/62PBeezy32-5466.jpg" alt="Beezy shot 8">
-
-        </div>
-    </div>
     
     <footer>
         <p>&copy;© 2025 Beezy Industries. All rights reserved.</p>
     </footer>
-    
+
+    <script>
+        const cursor = document.createElement('div');
+        cursor.id = 'custom-cursor';
+        document.body.appendChild(cursor);
+
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.left = `${e.pageX}px`;
+            cursor.style.top = `${e.pageY}px`;
+        });
+    </script>
 </body>
 </html>

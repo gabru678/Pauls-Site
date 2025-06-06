@@ -14,6 +14,8 @@ body {
 
     height: 100vh;
     margin: 0;
+
+    cursor: none; /* Removes the default mouse arrow */
 }
 
 h1 {
@@ -44,6 +46,19 @@ h2 {
 @keyframes slideIn {
     from { transform: translateY(-50px); opacity: 0; }
     to { transform: translateY(0); opacity: 1; }
+}
+
+/* Custom glowing circle */
+#custom-cursor {
+    position: absolute;
+    width: 50px; /* Size of the circle */
+    height: 50px;
+    border-radius: 50%; /* Makes it a circle */
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.8) 0%, rgba(0, 0, 255, 0.5) 100%);
+    box-shadow: 0 0 15px rgba(0, 0, 255, 0.8), 0 0 30px rgba(0, 0, 255, 0.5);
+    pointer-events: none; /* Prevents interference with clicks */
+    transform: translate(-50%, -50%); /* Centers the circle on the cursor */
+    z-index: 9999; /* Ensures it stays above all other elements */
 }
 
 
@@ -78,6 +93,12 @@ h2 {
     background-color: #f4f4f4;
     margin-top: 20px; /* Ensures spacing from header */
     overflow: auto;
+    border-radius: 18px; /* Rounded corners */
+    transition: transform 0.3s ease-in-out; /* Smooth hover effect */
+    animation: slideIn 4s drop-in;
+    animation-fill-mode: forwards; /* Keeps the final state of the animation */
+    animation-delay: 0.5s; /* Delay before the animation starts */
+    animation-duration: 4s; /* Duration of the animation */
 }
 
 .gallery img {
