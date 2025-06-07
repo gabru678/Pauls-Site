@@ -1,6 +1,6 @@
 body {
     font-family: 'Papyrus', sans-serif;
-    color: #333;
+    color: white;
     /*text-align: center; */
     background-color: #3c9af2de; 
     background: url('Images/PBeezy32-5985.jpg') no-repeat center center fixed;
@@ -22,10 +22,10 @@ html {
 h1 {
     font-size: 4em;
     font-weight: bold;
-    color: #000;
+    color: white;
     margin-top: 50px;
     margin-bottom: 500px; /* Adds space below header */
-    text-shadow: 2px 2px 4px rgba(14, 2, 2, 0.5);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
     letter-spacing: 2px;
     animation: fadeIn 4s ease-in;
     /* z-index: 9998;  Ensure it stays above all other elements */
@@ -33,11 +33,12 @@ h1 {
 
 h2 {
     font-size: 3em;
-    color: #3b0101;
+    color: white;
     margin-top: 20px;
     margin-bottom: 20px; /* Adds space below header */
     animation-delay: 1.5s;
     animation: fadeIn 5s ease-in;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 @keyframes slideIn {
     from { transform: translateY(-70px); opacity: 0; }
@@ -193,15 +194,95 @@ h2 {
 
 /* Style the form container */
 #contact-form {
-    max-width: 400px; /* Set a fixed width for the form */
-    margin: 50px auto; /* Center the form horizontally */
+    max-width: 400px;
+    margin: 50px auto;
     padding: 20px;
-    background-color: #f9f9f9; /* Light background for the form */
-    border: 1px solid #ccc; /* Optional: Add a border */
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow */
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    color: white;
 }
 
+/* Label styling */
+#contact-form label {
+    display: block;
+    margin-bottom: 8px;
+    color: white;
+    font-size: 1.1em;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Input field styling */
+#contact-form input,
+#contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    color: white;
+    font-size: 1em;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+}
+
+#contact-form input:focus,
+#contact-form textarea:focus {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.5);
+    outline: none;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+#contact-form textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+/* Submit button styling */
+#contact-form button {
+    width: 100%;
+    padding: 12px;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#contact-form button:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
+}
+
+#contact-form button:active {
+    transform: translateY(0);
+}
+
+/* Placeholder text color */
+#contact-form input::placeholder,
+#contact-form textarea::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* Error state */
+#contact-form input.error,
+#contact-form textarea.error {
+    border-color: #ff4444;
+    background: rgba(255, 68, 68, 0.1);
+}
+
+.error-message {
+    color: #ff4444;
+    font-size: 0.9em;
+    margin-top: -15px;
+    margin-bottom: 15px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
 
 /* Button hover effect */
 button {
@@ -234,14 +315,14 @@ input:focus, textarea:focus {
 
 /* Link hover effect */
 a {
-    color: #3c9af2;
+    color: white;
     text-decoration: none;
     transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 
 a:hover {
-    color: #1a73e8; /* Darker blue on hover */
-    text-shadow: 0 0 5px rgba(60, 154, 242, 0.5); /* Glow effect */
+    color: #e0e0e0; /* Slightly darker white on hover */
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5); /* White glow effect */
 }
 
 /* Fade-in animation */
