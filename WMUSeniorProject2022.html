@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Sampling</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="photography-content">
+        <h1>Development Portfolio</h1>
+        <p>This is from one of my final classes at WMU.  Thanks to my professor I was able to guide my way into the world of low level programming. </p>
+        <p>The goal is to learn how it works down to the bit flip.  It was a fantastic close to an education and a reminder that there is yet another word to learn of. </p>
+        
+
+        <div class="gallery">
+            <img src="Images/MSP430WMU2022.jpg" alt="Beezy shot 1">
+        </div>
+
+        <p>The code is somewhat availabale on Github, some of the more complex projects are not available due to the class still being taught.  Lets not make it too easy on the AI enabled students already.</p>
+        
+        <a href="https://github.com/gabru678" class="back-link">The code is available on Github at this hyperlink.</a>
+        <p> There will also be videos of the projects in action.  I will try to get them up as soon as possible.</p>
+        <a href="index.html" class="back-link">Back to Home</a>
+    </main>
+
+    <script>
+        const cursor = document.createElement('div');
+        cursor.id = 'custom-cursor';
+        document.body.appendChild(cursor);
+
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.left = `${e.pageX}px`;
+            cursor.style.top = `${e.pageY}px`;
+        });
+    </script>
+    
+    <footer>
+        <p>© 2025 Beezy Industries. Patent Pending.</p>
+    </footer>
+</body>
+</html>
